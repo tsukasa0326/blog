@@ -14,6 +14,11 @@
             <%= render template: 'layouts/headermenu' %>
          </div>
       </div>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    
+  </body>
     <div class="container">
       <div class = "main">
         <%= yield %>
