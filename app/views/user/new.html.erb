@@ -1,0 +1,47 @@
+<h2>
+ユーザー登録画面    
+</h2>
+
+<%= form_for :user, url: user_index_path do |f| %>
+
+<% if @user.errors.any? %>
+    <h3>入力した内容にエラーが<%= @user.errors.count %>件あります</h3>
+<% end %>
+
+<table>
+    <tr>
+        <td>
+            <%=f.label :'ニックネーム：'%>
+        </td>
+        <td>
+            <%= f.text_field :name, placeholder: '太郎'%>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%=f.label :'メールアドレス：'%>
+        </td>
+        <td>
+            <%= f.text_field :mail, placeholder: 'sample@xx.yy'%>
+        </td>
+    </tr>
+    <tr>
+        <td>    
+            <%=f.label :'パスワード：'%>
+        </td>
+        <td>
+            <%= f.text_field :password, placeholder: 'enter pass'%>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <%=f.label :'パスワード確認：'%>
+        </td>
+        <td>
+            <%= f.text_field :password_confirmation, placeholder: 'enter configpass'%>
+        </td>
+    </tr>
+</table>
+
+<%= f.submit '登録' %>
+<%end%>

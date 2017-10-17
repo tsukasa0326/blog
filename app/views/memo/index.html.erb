@@ -1,0 +1,27 @@
+<h2>
+    ダッシュボード
+</h2>
+    <div class="header-menu">
+    <%=link_to '記事の追加', new_memo_path %>
+    </div>
+
+
+<table>
+    <tr>
+        <th>記事タイトル</th><th>編集</th><th>削除</th>
+    </tr>
+    <tr>
+        <% @memos.each do |memo| %>
+        <td>
+            <%=link_to memo.title, memo_path(memo) %>
+        </td>
+        <td>
+            <%=link_to '[Edit]', edit_memo_path(memo), class: 'command' %>
+        </td>
+        <td>
+            <%=link_to '[x]', memo_path(memo), method: :delete, class: 'command', data: { confirm: '本当に削除しますか？'}%>
+        </td>
+        
+    <tr>
+    <% end %>
+</table>

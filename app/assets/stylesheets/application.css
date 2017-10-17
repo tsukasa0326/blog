@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ 
+ .all{
+  background-color: #F1F1F1;
+ }
+ 
+ .container{
+     width: 800px;
+     margin: 20px auto;
+ }
+ 
+ body{
+     font-family: Verdana, sans-serif;
+     font-size: 14px;
+ }
+ 
+ main{
+     background-color: #D3D3D3;
+ }
+ 
+ h2{
+     font-size: 14px;
+     padding-bottom: 10px;
+     margin-bottom: 15px;
+     border-bottom: 1px solid #ddd;
+ }
+ 
+ table {
+     margin-left: 10px;
+ }
+ 
+ .logo {
+        padding:5px 0px 0px 5px;
+        width: 215px;
+        height: 25px;
+        float: left
+ }
+ 
+ .header-menu{
+   padding: 5px 2.5px 0px 0px;
+   font-size: 12px;
+   font-weight: normal;
+   float: right;
+ }
+ 
+ .main{
+  width: 800px;
+  height: 1500px;
+ }
+ 
+ input[type="text"], textarea {
+  box-sizing:  border-box;
+  width: 600px;
+  padding: 5px;
+ }
+ 
+ textarea{
+   height: 160px;
+ }
+ 
+ .error{
+  font-size: 12px;
+  font-weight: bold;
+  color: tomato;
+ }
+ 
+ .command{
+  font-size: 12px;
+ }
+ 
+ .footer{
+  width: 800px;
+  text-align:center;
+ }
+ 
+ .headermenu{
+   background-color: #A9A9A9;
+   height: 35px;
+   
+ }
+ .menu{
+  padding: 5px 2.5px 0px 0px;
+  float:right;
+ }
+ 
+ .inputtext{
+  width: 60px
+  
+ }
