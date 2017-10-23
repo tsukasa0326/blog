@@ -1,15 +1,36 @@
 <h2>ログイン画面</h2>
+
+<!--エラーメッセージ-->
+ <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %> error"><%= message%></div>
+ <% end %>
+
 <%= form_for(:session, url: login_path) do |f| %>
+<table>
+  <tr>
       <div class="field">
-        <%= f.label :email %>
-        <%= f.email_field :email %>
+      <td>
+        <%= f.label :"メールアドレス:" %>
+      </td>
+      <td>
+        <%= f.email_field :email, placeholder: 'email' %>
+      </td>
       </div>
+  </tr>
+  <tr>
       <div class="field">
-        <%= f.label :password %>
-        <%= f.password_field :password %>
+      <td>
+        <%= f.label :"パスワード  :" %>
+      </td>
+      <td>
+        <%= f.password_field :password, placeholder: 'password' %>
+      </td>
       </div>
+  </tr>
+</table>
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "ログイン", class: 'button' %>
       </div>
     <% end %>
-    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+
+    <p>アカウントをお持ちでない場合は<%= link_to "こちら", new_user_path %></p>
