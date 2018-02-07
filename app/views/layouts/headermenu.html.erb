@@ -1,7 +1,12 @@
-  　<%= link_to 'ログイン', root_path%>
-  　<%= link_to 'ブログ開設', user_index_path %>
+  　<%if !logged_in?%>
+  　<%= link_to 'ブログ開設', user_index_path class: 'button' %>
+  　<%= link_to 'ログイン', login_path %>
+  　<%else%>
+  　<%= link_to 'ログアウト', logout_path, method: :delete %>
   　<%= link_to 'ダッシュボード', memo_index_path %>
   　<%= link_to 'アカウント設定', root_path %>
+  　<%end%>
+  　
 
     
    
